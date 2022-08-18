@@ -1,10 +1,11 @@
 const mysql = require('mysql');
+const env = require('./env');
 
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'maisoft_shop',
+  host: env.dbHost,
+  user: env.dbUser,
+  password: env.dbPassword,
+  database: env.dbName,
 });
 
 module.exports = db;
