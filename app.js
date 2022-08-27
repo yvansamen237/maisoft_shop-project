@@ -8,8 +8,6 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(express.json());
 
-console.log(env);
-
 db.connect((err) => {
   if (err) {
     console.log('Db connection error' + err);
