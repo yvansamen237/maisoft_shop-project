@@ -3,6 +3,10 @@ const app = express();
 const db = require('./start/src/config/db');
 const env = require('./start/src/config/env');
 const customerRoutes = require('./start/src/routers/customer');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(express.json());
 
 console.log(env);
 
